@@ -24,7 +24,7 @@ public class StatementPrinter {
     }
 
     private String renderPlainText() {
-        final int volumeCredits = statementData.getVolumeCredits();
+        final int volumeCredits = statementData.getTotalVolumeCredits();
         final int totalAmount = statementData.getTotalAmount();
 
         String result = "Statement for " + statementData.getCustomer() + "\n";
@@ -62,7 +62,7 @@ public class StatementPrinter {
      * @return int
      */
     public int getTotalVolumeCredits() {
-        return statementData.getVolumeCredits();
+        return statementData.getTotalVolumeCredits();
     }
 
     /**
@@ -81,5 +81,14 @@ public class StatementPrinter {
      */
     public int getAmount(Performance performance) {
         return statementData.getAmount(performance);
+    }
+
+    /**
+     * Returns the volume credits for the given performance.
+     * @param performance the given performance
+     * @return Returns the amount.
+     */
+    public int getVolumeCredits(Performance performance) {
+        return statementData.getVolumeCredits(performance);
     }
 }

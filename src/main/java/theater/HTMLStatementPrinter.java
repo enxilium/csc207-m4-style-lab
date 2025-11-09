@@ -31,7 +31,7 @@ public class HTMLStatementPrinter extends StatementPrinter {
 
         result.append(String.format("<p>Amount owed is <em>%s</em></p>%n",
                 usd(statementData.getTotalAmount())));
-        result.append(String.format("<p>You earned <em>%s</em> credits</p>%n", statementData.getVolumeCredits()));
+        result.append(String.format("<p>You earned <em>%s</em> credits</p>%n", statementData.getTotalVolumeCredits()));
         return result.toString();
     }
 }

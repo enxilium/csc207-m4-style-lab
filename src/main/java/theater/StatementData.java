@@ -55,7 +55,7 @@ public class StatementData {
      * Returns the total volume credits for this statement.
      * @return int
      */
-    public int getVolumeCredits() {
+    public int getTotalVolumeCredits() {
         int result = 0;
         for (PerformanceData performanceData : performances) {
             result += performanceData.getVolumeCredits();
@@ -84,5 +84,19 @@ public class StatementData {
                 AbstractPerformanceCalculator.createPerformanceCalculator(performance, play);
 
         return performanceCalculator.amountFor();
+    }
+
+    /**
+     * Returns the volume credits for the given performance.
+     * @param performance the given performance
+     * @return Returns the volume credits
+     */
+    public int getVolumeCredits(Performance performance) {
+        final Play play = this.plays.get(performance.getPlayID());
+
+        final AbstractPerformanceCalculator performanceCalculator =
+                AbstractPerformanceCalculator.createPerformanceCalculator(performance, play);
+
+        return performanceCalculator.volumeCreditsFor();
     }
 }
