@@ -25,7 +25,7 @@ public class HTMLStatementPrinter extends StatementPrinter {
             result.append(String.format(" <tr><td>%s</td><td>%s</td><td>%s</td></tr>%n",
                     perfData.getName(),
                     perfData.getAudience(),
-                    formatMoney(perfData.amountFor())));
+                    formatMoney(perfData.getAmount())));
         }
         result.append("</table>").append(System.lineSeparator());
 

@@ -23,9 +23,12 @@ public class StatementData {
 
     private PerformanceData createPerformanceData(Performance performance) {
         final Play play = this.plays.get(performance.getPlayID());
+
         final AbstractPerformanceCalculator performanceCalculator =
                 AbstractPerformanceCalculator.createPerformanceCalculator(performance, play);
-        return new PerformanceData(performance, play);
+
+        return new PerformanceData(performance, play, performanceCalculator.amountFor(),
+                performanceCalculator.volumeCreditsFor());
     }
 
     public String getCustomer() {
@@ -43,7 +46,7 @@ public class StatementData {
     public int getTotalAmount() {
         int result = 0;
         for (PerformanceData performanceData : performances) {
-            result += performanceData.amountFor();
+            result += performanceData.getAmount();
         }
         return result;
     }
@@ -55,7 +58,7 @@ public class StatementData {
     public int getVolumeCredits() {
         int result = 0;
         for (PerformanceData performanceData : performances) {
-            result += performanceData.volumeCreditsFor();
+            result += performanceData.getVolumeCredits();
         }
         return result;
     }
