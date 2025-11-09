@@ -61,7 +61,7 @@ public class StatementPrinter {
      * Returns the total volume credits for this statement.
      * @return int
      */
-    public int getVolumeCredits() {
+    public int getTotalVolumeCredits() {
         return statementData.getVolumeCredits();
     }
 
@@ -72,5 +72,14 @@ public class StatementPrinter {
      */
     public Play getPlay(Performance performance) {
         return statementData.getPlay(performance);
+    }
+
+    /**
+     * Returns the amount for the given performance.
+     * @param performance the given performance
+     * @return Returns the amount.
+     */
+    public int getAmount(Performance performance) {
+        return statementData.getAmount(performance);
     }
 }

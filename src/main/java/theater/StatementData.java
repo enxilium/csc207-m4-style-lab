@@ -71,4 +71,18 @@ public class StatementData {
     public Play getPlay(Performance performance) {
         return this.plays.get(performance.getPlayID());
     }
+
+    /**
+     * Returns the amount for the given performance.
+     * @param performance the given performance
+     * @return Returns the amount.
+     */
+    public int getAmount(Performance performance) {
+        final Play play = this.plays.get(performance.getPlayID());
+
+        final AbstractPerformanceCalculator performanceCalculator =
+                AbstractPerformanceCalculator.createPerformanceCalculator(performance, play);
+
+        return performanceCalculator.amountFor();
+    }
 }
