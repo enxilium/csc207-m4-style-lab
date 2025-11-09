@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class StatementData {
     private final Invoice invoice;
-    private List<PerformanceData> performances = new ArrayList<>();
+    private final List<PerformanceData> performances = new ArrayList<>();
     private final Map<String, Play> plays;
 
     public StatementData(Invoice invoice, Map<String, Play> plays) {
@@ -17,11 +17,15 @@ public class StatementData {
         this.plays = plays;
 
         for (Performance performance : invoice.getPerformances()) {
-            final Play play = this.plays.get(performance.getPlayID());
-            final PerformanceData performanceData = new PerformanceData(performance, play);
-            performances.add(performanceData);
+            performances.add(createPerformanceData(performance));
         }
+    }
 
+    private PerformanceData createPerformanceData(Performance performance) {
+        final Play play = this.plays.get(performance.getPlayID());
+        final AbstractPerformanceCalculator performanceCalculator =
+                AbstractPerformanceCalculator.createPerformanceCalculator(performance, play);
+        return new PerformanceData(performance, play);
     }
 
     public String getCustomer() {
