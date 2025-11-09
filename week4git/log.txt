@@ -1,4 +1,7 @@
-d2baccc (HEAD -> main, origin/main) feat: task 2.2
+00fc0a3 (HEAD -> main, origin/main) feat: task 2.4
+a5cbdf4 feat: task 2.3
+4754128 feat: task 2.2 log update
+d2baccc feat: task 2.2
 23b2871 feat: task 1.2 (git log)
 3adeb0f feat: task 2.1
 b64d6df feat: initial commit
