@@ -40,7 +40,7 @@ public class StatementPrinter {
         return result;
     }
 
-    private static String formatMoney(int totalAmount) {
+    public static String formatMoney(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
 }

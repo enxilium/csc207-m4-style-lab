@@ -58,7 +58,9 @@ public class StatementPrinterTests {
             StatementPrinter statementPrinter = new StatementPrinter(invoice, plays);
             String result = statementPrinter.statement();
 
-            assertEquals(String.format("Actual output:%n%s%nExpected:%s", result, expected), expected, result);
+            assertEquals(String.format("Actual output:%n%s%nExpected:%s", result, expected),
+                    expected.replaceAll("\r\n", "\n"),
+                    result.replaceAll("\r\n", "\n"));
         }
 
     }
