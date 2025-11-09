@@ -1,4 +1,6 @@
-3adeb0f (HEAD -> main) feat: task 2.1
-b64d6df (origin/main) feat: initial commit
+d2baccc (HEAD -> main, origin/main) feat: task 2.2
+23b2871 feat: task 1.2 (git log)
+3adeb0f feat: task 2.1
+b64d6df feat: initial commit
 74ae177 feat: initial commit
 d5e0909 feat: Task 1.1
