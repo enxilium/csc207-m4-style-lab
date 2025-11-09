@@ -25,12 +25,12 @@ public class HTMLStatementPrinter extends StatementPrinter {
             result.append(String.format(" <tr><td>%s</td><td>%s</td><td>%s</td></tr>%n",
                     perfData.getName(),
                     perfData.getAudience(),
-                    formatMoney(perfData.getAmount())));
+                    usd(perfData.getAmount())));
         }
         result.append("</table>").append(System.lineSeparator());
 
         result.append(String.format("<p>Amount owed is <em>%s</em></p>%n",
-                formatMoney(statementData.getTotalAmount())));
+                usd(statementData.getTotalAmount())));
         result.append(String.format("<p>You earned <em>%s</em> credits</p>%n", statementData.getVolumeCredits()));
         return result.toString();
     }

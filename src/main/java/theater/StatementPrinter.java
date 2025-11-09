@@ -31,11 +31,11 @@ public class StatementPrinter {
         for (PerformanceData performanceData : statementData.getPerformances()) {
             // print line for this order
             result += String.format("  %s: %s (%s seats)%n", performanceData.getName(),
-                    formatMoney(performanceData.getAmount()),
+                    usd(performanceData.getAmount()),
                     performanceData.getAudience());
         }
 
-        result += String.format("Amount owed is %s%n", formatMoney(totalAmount));
+        result += String.format("Amount owed is %s%n", usd(totalAmount));
         result += String.format("You earned %s credits\n", volumeCredits);
         return result;
     }
@@ -45,7 +45,7 @@ public class StatementPrinter {
      * @param totalAmount The amount to be formatted
      * @return String representing the monetary value
      */
-    public static String formatMoney(int totalAmount) {
+    public static String usd(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
 }
