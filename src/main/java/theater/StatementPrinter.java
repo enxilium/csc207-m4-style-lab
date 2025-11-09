@@ -48,4 +48,29 @@ public class StatementPrinter {
     public static String usd(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
+
+    /**
+     * Returns the total amount for this statement.
+     * @return int
+     */
+    public int getTotalAmount() {
+        return statementData.getTotalAmount();
+    }
+
+    /**
+     * Returns the total volume credits for this statement.
+     * @return int
+     */
+    public int getVolumeCredits() {
+        return statementData.getVolumeCredits();
+    }
+
+    /**
+     * Returns the play for the given performance.
+     * @param performance the given performance
+     * @return Returns the associated Play object.
+     */
+    public Play getPlay(Performance performance) {
+        return statementData.getPlay(performance);
+    }
 }

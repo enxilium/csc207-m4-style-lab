@@ -62,4 +62,13 @@ public class StatementData {
         }
         return result;
     }
+
+    /**
+     * Returns the play for the given performance.
+     * @param performance the given performance
+     * @return Returns the associated Play object.
+     */
+    public Play getPlay(Performance performance) {
+        return this.plays.get(performance.getPlayID());
+    }
 }
