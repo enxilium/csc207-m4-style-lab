@@ -13,4 +13,4 @@ d2baccc feat: task 2.2
 3adeb0f feat: task 2.1
 b64d6df feat: initial commit
 74ae177 feat: initial commit
-d5e0909 feat: Task 1.
+d5e0909 feat: Task 1.1
