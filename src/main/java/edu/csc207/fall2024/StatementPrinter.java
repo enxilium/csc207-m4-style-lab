@@ -40,6 +40,11 @@ public class StatementPrinter {
         return result;
     }
 
+    /**
+     * Formats the given amount as a monetary string.
+     * @param totalAmount The amount to be formatted
+     * @return String representing the monetary value
+     */
     public static String formatMoney(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
