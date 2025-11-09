@@ -206,11 +206,11 @@ Doing this kind of old-code refactoring in its own commit is an excellent idea.
 
 We'll be using `CheckStyle` as one tool to automatically scan our Java projects for style issues.
 
-- [ ] The project includes a file called `mystyle.xml`. The project _should_ already be configured to use it,
+- [X] The project includes a file called `mystyle.xml`. The project _should_ already be configured to use it,
   but if not, you can go into the IntelliJ settings, go to `Tools -> CheckStyle` and add `mystyle.xml` as a
   new configuration file. For the description, you can call it anything you want, such as `CSC207 Checks`.
 
-- [ ] For each Java source file in `src/main/java/`, fix all CheckStyle issues that are detected.
+- [X] For each Java source file in `src/main/java/`, fix all CheckStyle issues that are detected.
   You should either see the CheckStyle Tool Window icon (it looks like a pencil) on the left of IntelliJ or
   you may need to go to `View -> Tool Windows -> CheckStyle` to open the CheckStyle Tool Window. See the
   following which talks more about this step.
@@ -255,7 +255,7 @@ Tips:
 
 ### **Important: Add, commit, and push your changes.**
 
-- [ ] When you are done, commit your work with a commit message that includes the string "Task 1.1".
+- [X] When you are done, commit your work with a commit message that includes the string "Task 1.1".
 
 **Important: we'll be looking for the string "Task 1.1" in your git log of commit messages!
 
@@ -269,14 +269,14 @@ As highlighted already, the emphasis in this assignment is on the process of per
 refactoring. To document this process, you will also maintain a record of your git log in your
 repository.
 
-- [ ] Run the command `git log --since 2024-09-30 --oneline` in the terminal and copy+paste the output
+- [X] Run the command `git log --since 2024-09-30 --oneline` in the terminal and copy+paste the output
   into the `week4git/log.txt` file to replace all of its contents.
   - Alternatively, make sure your terminal is open in your week3git directory and you can run
     `git log --since 2024-09-30 --oneline > log.txt` to replace the contents of the log.txt file with the log output.
 
 **Important**: do this each time you are asked to commit your work in the remaining tasks.
 
-- [ ] Commit your changes to `log.txt` now; include the string "Task 1.2" in your commit message. 
+- [X] Commit your changes to `log.txt` now; include the string "Task 1.2" in your commit message. 
 
 Note: this commit won't include the updated log with the most recent commit, which is fine. The next
 time we ask you to commit, you'll update your `log.txt` file again and commit the updated log.
@@ -842,7 +842,7 @@ but take the time now to clean up any remaining issues.
 2. Update your `log.txt` file and commit the changes to any files.
    Make sure to include the string "Task 6" in your commit message.
 
-- [ ] If your code was already clean, just [X] the checkbox on this line and commit that change — again, remembering to
+- [X] If your code was already clean, just [X] the checkbox on this line and commit that change — again, remembering to
   include "Task 6" in your commit message.
 
 3. Update your `log.txt` one final time so that it contains your last "Task 6" commit, then push your completed code to MarkUs.

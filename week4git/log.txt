@@ -1,4 +1,11 @@
-00fc0a3 (HEAD -> main, origin/main) feat: task 2.4
+af34f60 (HEAD -> main, origin/main) feat: task 6
+da74690 feat: task 5 + updated test for better error showing
+b673009 feat: task 4.3
+adcce1f feat: task 4.2
+b1c13c0 feat: task 4.1
+27dd40f feat: task 3.2 - also updated test files to ignore line separator diffs
+2925a44 feat: task 3.1
+00fc0a3 feat: task 2.4
 a5cbdf4 feat: task 2.3
 4754128 feat: task 2.2 log update
 d2baccc feat: task 2.2
@@ -6,4 +13,4 @@ d2baccc feat: task 2.2
 3adeb0f feat: task 2.1
 b64d6df feat: initial commit
 74ae177 feat: initial commit
-d5e0909 feat: Task 1.1
+d5e0909 feat: Task 1.
