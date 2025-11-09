@@ -18,6 +18,10 @@ abstract class AbstractPerformanceCalculator {
                 return new TragedyCalculator(performance, play);
             case "comedy":
                 return new ComedyCalculator(performance, play);
+            case "history":
+                return new HistoryCalculator(performance, play);
+            case "pastoral":
+                return new PastoralCalculator(performance, play);
             default:
                 throw new RuntimeException(String.format("unknown type: %s", play.getType()));
         }
@@ -36,13 +40,7 @@ abstract class AbstractPerformanceCalculator {
      */
     public int volumeCreditsFor() {
         int result = 0;
-
         result += Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
-        // add extra credit for every five comedy attendees
-        if ("comedy".equals(play.getType())) {
-            result += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
-        }
-
         return result;
     }
 }
