@@ -1,4 +1,4 @@
-package edu.csc207.fall2024;
+package theater;
 
 import java.text.NumberFormat;
 import java.util.Locale;

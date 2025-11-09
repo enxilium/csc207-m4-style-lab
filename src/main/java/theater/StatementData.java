@@ -1,4 +1,4 @@
-package edu.csc207.fall2024;
+package theater;
 
 import java.util.ArrayList;
 import java.util.List;

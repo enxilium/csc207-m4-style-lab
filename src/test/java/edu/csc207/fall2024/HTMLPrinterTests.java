@@ -3,6 +3,7 @@ package edu.csc207.fall2024;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
+import theater.*;
 
 import java.io.IOException;
 import java.util.*;
